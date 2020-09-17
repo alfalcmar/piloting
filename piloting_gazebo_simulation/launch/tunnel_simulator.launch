@@ -1,0 +1,27 @@
+<launch>
+
+	<arg name="multi" default="false"/>
+    <arg name="ns_prefix" default="uav_"/>
+
+    <arg name="ual_server" default="on"/>
+    <arg name="ual_pub_rate" default="30.0"/>
+
+    <arg name="mode" default="sitl"/>
+    <arg name="robot_model" default="mbzirc"/>
+
+    <arg name="pose_frame_id" default=""/><!-- To publish ual/pose in other frame than local, e.g. map -->
+    <arg name="mavros_offboard_rate" default="30.0"/>
+    <arg name="position_th" default="0.33"/>
+    <arg name="orientation_th" default="0.65"/>
+    <arg name="hold_pose_time" default="3.0"/>
+    <!-- Launch Gazebo simulation -->
+	<rosparam param="/use_sim_time">true</rosparam>
+    <node pkg="px4_bringup" type="launch_gzworld.py" name="gazebo_world" output="screen"
+    args="-physics=ode -world=$(find piloting_gazebo_simulation)/worlds/tunnel_scenario.world
+		  -add_model_path=$(find piloting_gazebo_simulation)/models
+		  -description_package=piloting_gazebo_simulation">
+		<rosparam param="sim_origin">[54.193125, 10.128319, 0]</rosparam>  <!-- [lat,lon,alt] -->
+	</node>
+
+
+</launch>
