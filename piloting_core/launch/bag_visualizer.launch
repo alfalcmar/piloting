@@ -1,0 +1,5 @@
+<launch>
+    <node pkg="rviz" name="rviz" type="rviz" args="-d $(find piloting_core)/rviz/bag_visualization.rviz" ></node>
+    <node pkg = "piloting_core" name = "bag_visualizer" type="bag_visual.py" output="screen"> </node>
+</launch>
+
