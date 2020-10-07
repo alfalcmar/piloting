@@ -40,10 +40,10 @@
     ixy="0.0" ixz="0.0"  iyz="0.0" /> <!-- [kg.m^2] [kg.m^2] [kg.m^2] [kg.m^2] [kg.m^2] [kg.m^2] -->
   </xacro:property>
 
-  <!--Property cylinder_camera-->
+  <!-- Property cylinder_camera
   <xacro:property name="camera_cylinder">
     <box size="0.1 0.025 0.02"/>
-  </xacro:property>
+  </xacro:property> -->
 
   <!-- Included URDF Files -->
   <xacro:include filename="$(find robots_description)/urdf/multirotor_base.xacro" />

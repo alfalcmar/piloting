@@ -18,7 +18,15 @@
   <xacro:include filename="$(find robots_description)/urdf/component_snippets.xacro" />
 
   <!-- Instantiate mbzirc "mechanics" -->
-  <xacro:include filename="$(find robots_description)/models/mbzirc/geometry.xacro" />
+  <xacro:include filename="$(find piloting_gazebo_simulation)/models/mbzirc/geometry.xacro" />
+
+
+  <xacro:include filename="$(find realsense_gazebo_plugin)/urdf/d435.urdf.xacro"/>
+  
+  <!-- <link name="base_link" /> -->
+  <sensor_d435 parent="base_link">
+    <origin xyz="0.4 0 0" rpy="0 0 0"/>
+  </sensor_d435>
 
   <xacro:if value="$(arg enable_gps_plugin)">
     <!-- Instantiate gps plugin. -->
@@ -124,16 +132,7 @@
     </xacro:bag_plugin_macro>
   </xacro:if>
 
-
-
-  <!-- Import macro for realsense-RS200 camera-->
-  <xacro:include filename="$(find realsense_gazebo_plugin)/urdf/realsense-RS200.macro.xacro"/>
-  
-  <!-- Create camera instance -->
-  <xacro:realsense-rs200 prefix="" parent="base_link">
-      <origin xyz="0.22 0 -0.14" rpy="0 0 0" />   
-  </xacro:realsense-rs200>
-
+     
 
   <!-- <xacro:vi_sensor_depth_macro
     namespace="${namespace}"
