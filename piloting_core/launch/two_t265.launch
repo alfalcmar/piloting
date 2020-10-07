@@ -3,14 +3,14 @@
     <include file="$(find realsense2_camera)/launch/rs_t265.launch">
         <arg name="camera" value="cam1"/>
         <arg name="serial_no" value="929122110980"/>
-	    <arg name="enable_fisheye1"="true"/>
-	    <arg name="enable_fisheye2"="true"/>
+	    <arg name="enable_fisheye1" value="true"/>
+	    <arg name="enable_fisheye2" value="true"/>
     </include>
     <include file="$(find realsense2_camera)/launch/rs_t265.launch">
         <arg name="camera" value="cam2"/>
         <arg name="serial_no" value="2322110456"/>
-	    <arg name="enable_fisheye1"="true"/>
-	    <arg name="enable_fisheye2"="true"/>
+	    <arg name="enable_fisheye1" value="true"/>
+	    <arg name="enable_fisheye2" value="true"/>
 
     </include>
 
