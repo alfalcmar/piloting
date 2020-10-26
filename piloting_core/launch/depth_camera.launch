@@ -1,0 +1,15 @@
+
+<launch>
+    <!-- t435 robot 1 -->
+    <include file="$(find realsense2_camera)/launch/rs_camera.launch">
+        <arg name="initial_reset" value="true"/>
+	<arg name="camera" value="depth_camera"/>
+	<arg name="enable_pointcloud" value="true" />
+        <arg name="serial_no" value="848312070730"/>
+	<arg name="align_depth" value="true" />
+	<arg name="filters" value="temporal,spatial,pointcloud"/>
+ 	<arg name ="pointcloud_texture_stream" value="RS2_STREAM_ANY"/> 
+	<arg name="enable_color" value="false"/> 
+    </include>
+</launch>
+
