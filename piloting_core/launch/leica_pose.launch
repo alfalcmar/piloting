@@ -1,0 +1,3 @@
+<launch>
+<node pkg="piloting_core" name= "tsbridge" type="tsbridge.py" output="screen"/>
+</launch>
