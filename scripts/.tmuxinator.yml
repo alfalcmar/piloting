@@ -1,0 +1,25 @@
+name: experiments
+root: ./
+
+windows:
+  - roscore:
+      layout: even-vertical
+      panes:
+        - roscore
+  - cameras:
+      layout: even-vertical
+      panes:
+        - roslaunch piloting_core cam_front.launch
+        - roslaunch piloting_core cam_down.launch
+        - roslaunch piloting_core depth_camera.launch
+  - leica:
+      layout: even-vertical
+      panes:
+        - roslaunch piloting_core ts_bridge.launch
+        - roslaunch leica_pose.launch
+  - ual:
+      layout: even-vertical
+      panes: 
+        - roslaunch mavros.launch
+        - roslaunch ual.launch
+        
