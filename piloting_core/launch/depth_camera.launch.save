@@ -1,0 +1,10 @@
+<launch>
+    <!-- t435 robot 1 -->
+    <include file="$(find realsense2_camera)/launch/rs_camera.launch">
+        <arg name="camera" value="depth_camera"/>
+        <arg name="serial_no" value="848312070730"/>
+	<!--    <arg name="enable_fisheye1" value="true"/>
+	    <arg name="enable_fisheye2"rosrun tf static_transform_publisher 0 0 0 0 0 0 map base_link 50 value="true"/> -->
+    </include>
+</launch>
+

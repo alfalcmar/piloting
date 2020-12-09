@@ -5,6 +5,7 @@
         <arg name="initial_reset" value="true"/>
 	<arg name="camera" value="depth_camera"/>
 	<arg name="enable_pointcloud" value="true" />
+	<arg name="enable_fisheye" value="true" />
         <arg name="serial_no" value="848312070730"/>
 	<arg name="align_depth" value="true" />
 	<arg name="filters" value="temporal,spatial,pointcloud"/>

@@ -13,7 +13,7 @@ import sys
 import time
 import struct
 
-IP_TS_SERVER = '192.168.1.101'
+IP_TS_SERVER = '192.168.1.102'
 PORT_TS_SERVER = 8000
 FLIGHT_MODE = ''
 
@@ -89,7 +89,7 @@ def talker():
     rospy.init_node('tsbridge', anonymous=True)
     output = PoseStamped()
     
-    pub = rospy.Publisher('/uav_1/pose', PoseStamped, queue_size=1)
+    pub = rospy.Publisher('/leica/pose', PoseStamped, queue_size=1)
 
     leicaThread = LeicaThread(IP_TS_SERVER, PORT_TS_SERVER)
     leicaThread.start()

@@ -1,0 +1,7 @@
+name: sample
+root: ~/
+
+windows:
+  - roscore:
+    - roscore
+  

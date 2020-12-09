@@ -4,6 +4,7 @@ root: ./
 windows:
   - roscore:
       layout: even-vertical
+      synchronize: after
       panes:
         - roscore
   - cameras:
@@ -15,11 +16,10 @@ windows:
   - leica:
       layout: even-vertical
       panes:
-        - roslaunch piloting_core ts_bridge.launch
-        - roslaunch leica_pose.launch
-  - ual:
+        - roslaunch piloting_core leica_pose.launch
+  - rosbag:
       layout: even-vertical
       panes: 
-        - roslaunch mavros.launch
-        - roslaunch ual.launch
-        
+       - 
+       - 
+
