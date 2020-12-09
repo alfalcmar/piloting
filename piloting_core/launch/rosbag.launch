@@ -1,0 +1,11 @@
+<launch>
+
+    <node pkg="rosbag" type="record" name="rosbag_record_logs" output="screen"
+	    args="
+        /cam1/odom/sample
+        /cam2/odom/sample
+        /depth_camera/depth/image_rect_raw
+        /depth_camera/depth/color/points
+        "/>
+</launch>
+
